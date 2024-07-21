@@ -13,12 +13,13 @@ const axiosClient = axios.create({
 const CreateNewResume = (data) => {
     return axiosClient.post('/user-resumes', data);
 }
+
 const GetUserResume = (userEmail) => {
-    return axiosClient.get('/user-resumes?filters[user_Email][$eq]=' + userEmail)
+    return axiosClient.get('/user-resumes?filters[user_Email][$eq]=' + userEmail);
 }
 
 const updateResumeData = (id, data) => {
-    return axiosClient.put('/user-resumes/' + id, data)
+    return axiosClient.put('/user-resumes/' + id, data);
 }
 
 const GetResumeById = (id) => {
@@ -28,6 +29,10 @@ const GetResumeById = (id) => {
 const DeleteResume = (id) => {
     return axiosClient.delete('/user-resumes/' + id);
 }
+
+console.log('VITE_STRAPI_API_KEY:', import.meta.env.VITE_STRAPI_API_KEY);
+console.log('VITE_BASE_URL:', import.meta.env.VITE_BASE_URL);
+
 
 export default {
     CreateNewResume, GetUserResume, updateResumeData, GetResumeById, DeleteResume
