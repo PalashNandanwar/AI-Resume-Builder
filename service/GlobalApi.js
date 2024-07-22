@@ -30,10 +30,6 @@ const DeleteResume = (id) => {
     return axiosClient.delete('/user-resumes/' + id);
 }
 
-console.log('VITE_STRAPI_API_KEY:', import.meta.env.VITE_STRAPI_API_KEY);
-console.log('VITE_BASE_URL:', import.meta.env.VITE_BASE_URL);
-
-
 export default {
     CreateNewResume, GetUserResume, updateResumeData, GetResumeById, DeleteResume
 };
