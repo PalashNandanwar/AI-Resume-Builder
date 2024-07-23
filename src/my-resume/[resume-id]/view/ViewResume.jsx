@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Download, Share, Share2Icon } from "lucide-react";
+import { Download, Share2Icon } from "lucide-react";
 import Header from "../../../components/custom/Header";
 import { Button } from "../../../components/ui/button";
 import PreviewSection from "../../../dashboard/resume/component/PreviewSection";
