@@ -25,11 +25,11 @@ const ExperienceForm = ({ enableNext }) => {
     const param = useParams();
 
     // Update experience list from context if available
-    // useEffect(() => {
-    //     if (resumeValue?.experience) {
-    //         setExperienceList(resumeValue.experience);
-    //     }
-    // }, [resumeValue]);
+    useEffect(() => {
+        if (resumeValue?.experience) {
+            setExperienceList(resumeValue.experience);
+        }
+    }, [resumeValue]);
 
     const handleChange = (idx, e) => {
         const newEntries = [...experienceList];
